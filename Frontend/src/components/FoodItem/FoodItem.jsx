@@ -4,7 +4,7 @@ import { assets, food_list } from '../../assets/assets'
 import { StoreContext } from '../../context/StoreContext';
 
 const val=0;
-const FoodItem = ({id=0,name,price,description,image}) => {
+const FoodItem = ({id,name,price,description,image}) => {
     
     // console.log("ID: "+food_list[0]._id+ "  name :"+name);
 
