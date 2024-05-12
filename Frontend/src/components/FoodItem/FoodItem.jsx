@@ -1,10 +1,14 @@
 import React, { useContext ,useState } from 'react'
 import './FoodItem.css'
-import { assets } from '../../assets/assets'
+import { assets, food_list } from '../../assets/assets'
 import { StoreContext } from '../../context/StoreContext';
 
-const FoodItem = ({id,name,price,description,image}) => {
-    console.log("ID: "+id+ "  name :"+name);
+const val=0;
+const FoodItem = ({id=0,name,price,description,image}) => {
+    
+    // console.log("ID: "+food_list[0]._id+ "  name :"+name);
+
+              
 
     // i commented here because it is not use below
     // const [itemCount, setItemCount] = useState(0); 
@@ -23,7 +27,7 @@ const FoodItem = ({id,name,price,description,image}) => {
                 <img onClick={()=>setItemCount(prev=>prev+1)} src={assets.add_icon_green} alt="" />
             </div>
             }  */}
-
+                
                 { !cartItems[id]
             ?<img   className='add' onClick={()=>addToCart(id)} src={assets.add_icon_white} alt='' />
             :<div className='food-item-counter'>
